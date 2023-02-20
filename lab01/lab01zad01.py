@@ -10,8 +10,13 @@ def prime(n):
         return prime
 
 
+print(prime(3))
+print(prime(4))
+print(prime(49))
+
+
 def select_primes(x):
     return [number for number in x if prime(number)]
 
 
-select_primes([3, 6, 11, 25, 19])
+print(select_primes([3, 6, 11, 25, 19]))
