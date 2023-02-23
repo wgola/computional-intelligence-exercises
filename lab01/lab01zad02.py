@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-miasta = pd.read_csv("~/inteligencja-obliczeniowa/lab01/miasta.csv")
+miasta = pd.read_csv("~/Documents/inteligencja-obliczeniowa/lab01/miasta.csv")
 
 print(miasta)
 
@@ -18,7 +18,7 @@ miasta.plot(x="Rok", y="Gdansk", marker="o", color="red", legend=False,
 miasta.plot(x="Rok", y=["Gdansk", "Poznan", "Szczecin"], marker="o",
             title="Zmiany ludnosci w miastach", xlabel="Lata", ylabel="Liczba ludnosci [W tys.]")
 
-# plt.show()
+plt.show()
 
 df = miasta.drop('Rok', axis=1)
 
