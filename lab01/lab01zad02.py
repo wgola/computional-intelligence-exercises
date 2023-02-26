@@ -1,7 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-miasta = pd.read_csv("~/Documents/inteligencja-obliczeniowa/lab01/miasta.csv")
+miasta = pd.read_csv(
+    "~/Documents/computional-intelligence-exercises/lab01/miasta.csv")
 
 print("Tabela z danymi: ")
 print(miasta)
@@ -14,11 +15,11 @@ miasta.loc[len(miasta)] = [2010, 460, 555, 405]
 print("Tabela z dodanym wierszem: ")
 print(miasta)
 
-miasta.plot(x="Rok", y="Gdansk", marker="o", color="red", legend=False,
+miasta.plot(x="Rok", y="Gdansk", marker="o", color="red", legend=False, xticks=miasta["Rok"], rot=45,
             title="Ludnosc w miastach Polski", xlabel="Lata", ylabel="Liczba ludnosci [W tys.]")
 
 
-miasta.plot(x="Rok", y=["Gdansk", "Poznan", "Szczecin"], marker="o",
+miasta.plot(x="Rok", y=["Gdansk", "Poznan", "Szczecin"], marker="o", xticks=miasta["Rok"], rot=45,
             title="Zmiany ludnosci w miastach", xlabel="Lata", ylabel="Liczba ludnosci [W tys.]")
 
 plt.show()
